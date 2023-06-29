@@ -5,12 +5,12 @@ import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Hover;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
-import static com.amazon.page.CabeceraPage.LOGO_AMAZON;
-import static com.amazon.page.CabeceraPage.SIGLAS_IDIOMA;
+import static com.amazon.page.CabeceraPage.*;
 
 public class CambiarLenguajeStepDefinitions {
 
@@ -18,14 +18,15 @@ public class CambiarLenguajeStepDefinitions {
     public void obtenerLenguajePagina(String lenguaje) {
         OnStage.theActorCalled("usuario").attemptsTo(
                 Open.url("https://www.amazon.com"),
-                Ensure.that(SIGLAS_IDIOMA).textContent().isEqualTo(lenguaje)
+                Ensure.that(SIGLAS_IDIOMA).textContent().isEqualTo(lenguaje),
+                Hover.over(BTN_LENGUAJE)
         );
     }
 
     @Cuando("cambio el lenguaje de la pagina a {string}")
     public void cambiarLenguajePagina(String lenguaje) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                SeleccionarLenguaje.CambiarA(lenguaje)
+                SeleccionarLenguaje.cambiarA(lenguaje)
         );
     }
 

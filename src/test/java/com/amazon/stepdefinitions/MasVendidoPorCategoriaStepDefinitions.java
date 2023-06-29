@@ -21,7 +21,7 @@ public class MasVendidoPorCategoriaStepDefinitions {
         OnStage.theActorCalled("comprador").attemptsTo(
                 Open.url("https://www.amazon.com"),
                 Click.on(DROPDOWN_CATEGORIAS),
-                CambiarCategoriaDropdown.Seleccionar(categoria),
+                CambiarCategoriaDropdown.seleccionar(categoria),
                 Enter.theValue().into(INPUT_BARRA_BUSQUEDA).thenHit(Keys.ENTER)
         );
     }

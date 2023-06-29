@@ -13,7 +13,7 @@ import static com.amazon.page.CabeceraPage.*;
 import static com.amazon.page.MenuDesplegablePage.*;
 import static com.amazon.page.ResultadosBusqueda.itemsResultadoBusqueda;
 
-public class BuscarPorSubcategoria {
+public class BuscarPorSubcategoriaStepDefinitions {
 
     @Cuando("selecciono la categoria {string}")
     public void seleccionarLaCategoria(String categoria) {
@@ -21,14 +21,14 @@ public class BuscarPorSubcategoria {
                 Open.url("https://www.amazon.com"),
                 Click.on(MENU_DESPLEGABLE_HAMBURGESA),
                 Click.on(VER_TODO_CATEGORIAS),
-                SeleccionarCategoriaMenu.Seleccionar(categoria)
+                SeleccionarCategoriaMenu.seleccionar(categoria)
         );
     }
 
     @Cuando("selecciono la subcategoria {string}")
     public void seleccionarLaSubcategoriaImpresoras(String subcategoria) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                SeleccionarCategoriaMenu.Seleccionar(subcategoria)
+                SeleccionarCategoriaMenu.seleccionar(subcategoria)
         );
     }
 

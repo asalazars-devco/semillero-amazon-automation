@@ -15,7 +15,7 @@ public class CabeceraPage {
 
     public static Target DROPDOWN_CATEGORIAS = Target.the("lista desplegable de categorias").locatedBy("//div[@id='nav-search-dropdown-card']");
 
-    public static Target OPCION_VIDEOJUEGOS_DROPDOWN = Target.the("opcion videojuegos en lista desplegable").locatedBy("//option[contains(text(), 'Videojuegos')]");
-
     public static Target MENU_DESPLEGABLE_HAMBURGESA = Target.the("menu tipo hamburgesa que despliega opciones").located(By.id("nav-hamburger-menu"));
+
+    public static Target BTN_ENVIAR_A = Target.the("boton enviar a").located(By.id("nav-global-location-slot"));
 }

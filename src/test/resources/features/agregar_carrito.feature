@@ -6,7 +6,7 @@
     Para posteriormente comprar
 
   Escenario: agregar un control de pc al carrito de compras
-    Cuando agrego un "control de pc" al carrito de compras
+    Cuando agrego un "control gaming" al carrito de compras
     Entonces debe verse 1 item en el carrito de compras
 
   Escenario: agregar 3 items al carrito de compras

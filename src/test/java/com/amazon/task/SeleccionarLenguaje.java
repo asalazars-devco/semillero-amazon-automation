@@ -9,7 +9,7 @@ import static com.amazon.page.CabeceraPage.BTN_LENGUAJE;
 import static com.amazon.page.PreferenciasUsuarioPage.*;
 
 public class SeleccionarLenguaje {
-    public static Performable CambiarA(String lenguaje) {
+    public static Performable cambiarA(String lenguaje) {
         Target opcionIdioma = obtenerOpcionIdioma(lenguaje);
 
         return Task.where("{0} seleccionando '" + lenguaje + "'",

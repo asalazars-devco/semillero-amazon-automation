@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class SeleccionarCategoriaMenu {
-    public static Performable Seleccionar(String categoria) {
+    public static Performable seleccionar(String categoria) {
         Target opcionCategoria = obtenerOpcionCategoria(categoria);
 
         return Task.where("{0} seleccionando '" + categoria + "'",

@@ -6,7 +6,7 @@ import org.junit.AssumptionViolatedException;
 public class SaltarPruebasManualesStepDefinitions {
 
     @Before("@manual")
-    public void skipManualScenarios() {
+    public void omitirEscenarioManual() {
         throw new AssumptionViolatedException("Este escenario es manual y no se ejecutara automaticamente.");
     }
 }
