@@ -11,7 +11,11 @@ public class CabeceraPage {
 
     public static Target SIGLAS_IDIOMA = Target.the("siglas del idioma").locatedBy("//div[@id='nav-tools']/a[@id='icp-nav-flyout']//div");
 
-    public static Target DELIVER_WORD = Target.the("palabra envio en ingles").locatedBy("//div[@id='nav-global-location-slot']//span[contains(text(), 'Deliver to')]");
-
     public static Target LOGO_AMAZON = Target.the("logo amazon").located(By.id("nav-logo"));
+
+    public static Target DROPDOWN_CATEGORIAS = Target.the("lista desplegable de categorias").locatedBy("//div[@id='nav-search-dropdown-card']");
+
+    public static Target OPCION_VIDEOJUEGOS_DROPDOWN = Target.the("opcion videojuegos en lista desplegable").locatedBy("//option[contains(text(), 'Videojuegos')]");
+
+    public static Target MENU_DESPLEGABLE_HAMBURGESA = Target.the("menu tipo hamburgesa que despliega opciones").located(By.id("nav-hamburger-menu"));
 }

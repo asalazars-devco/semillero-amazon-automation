@@ -6,11 +6,11 @@
     Para ver la pagina en lenguaje de preferencia
 
   Escenario: cambiar lenguaje de la pagina a Ingles
-    Dado la pagina se encuentra en lenguaje "Español"
-    Cuando cambio el lenguaje de la pagina a "English"
-    Entonces debe verse la pagina en lenguaje "English"
+    Dado la pagina se encuentra en lenguaje "ES"
+    Cuando cambio el lenguaje de la pagina a "EN"
+    Entonces debe verse la pagina en lenguaje "EN"
 
   Escenario: cambiar lenguaje de la pagina a Aleman
-    Dado la pagina se encuentra en lenguaje "Español"
-    Cuando cambio el lenguaje de la pagina a "Deutsch"
-    Entonces debe verse la pagina en lenguaje "Deutsch"
+    Dado la pagina se encuentra en lenguaje "ES"
+    Cuando cambio el lenguaje de la pagina a "DE"
+    Entonces debe verse la pagina en lenguaje "DE"

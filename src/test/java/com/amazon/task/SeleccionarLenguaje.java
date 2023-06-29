@@ -5,9 +5,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static com.amazon.page.CabeceraPage.BTN_LENGUAJE;
 import static com.amazon.page.PreferenciasUsuarioPage.*;
 
@@ -22,20 +19,8 @@ public class SeleccionarLenguaje {
         );
     }
 
-    private static final Map<String, Target> opcionesIdioma = new HashMap<>();
-
-    static {
-        opcionesIdioma.put("English", OPCION_EN);
-        opcionesIdioma.put("Español", OPCION_ES);
-        opcionesIdioma.put("Português", OPCION_PT);
-        opcionesIdioma.put("Deutsch", OPCION_DE);
-    }
-
     private static Target obtenerOpcionIdioma(String lenguaje) {
-        Target opcionIdioma = opcionesIdioma.get(lenguaje);
-        if (opcionIdioma == null) {
-            throw new IllegalArgumentException("Lenguaje no valido: " + lenguaje);
-        }
+        Target opcionIdioma = Target.the("opcion lenguaje " + lenguaje).locatedBy("//div[@id='icp-language-settings']//span[text()='" + lenguaje + "']/ancestor::div[@class='a-row a-spacing-mini']");
         return opcionIdioma;
     }
 }

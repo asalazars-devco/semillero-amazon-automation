@@ -9,9 +9,8 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
-import static com.amazon.page.CabeceraPage.*;
-import static com.amazon.page.FooterPage.TEXT_LENGUAJE;
-import static com.amazon.page.PreferenciasUsuarioPage.*;
+import static com.amazon.page.CabeceraPage.LOGO_AMAZON;
+import static com.amazon.page.CabeceraPage.SIGLAS_IDIOMA;
 
 public class CambiarLenguajeStepDefinitions {
 
@@ -19,7 +18,7 @@ public class CambiarLenguajeStepDefinitions {
     public void obtenerLenguajePagina(String lenguaje) {
         OnStage.theActorCalled("usuario").attemptsTo(
                 Open.url("https://www.amazon.com"),
-                Ensure.that(TEXT_LENGUAJE).textContent().isEqualTo(lenguaje)
+                Ensure.that(SIGLAS_IDIOMA).textContent().isEqualTo(lenguaje)
         );
     }
 
@@ -34,7 +33,7 @@ public class CambiarLenguajeStepDefinitions {
     public void verificarLenguajePagina(String lenguaje) {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 Click.on(LOGO_AMAZON),
-                Ensure.that(TEXT_LENGUAJE).textContent().isEqualTo(lenguaje)
+                Ensure.that(SIGLAS_IDIOMA).textContent().isEqualTo(lenguaje)
         );
     }
 }
